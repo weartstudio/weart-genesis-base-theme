@@ -1,0 +1,4 @@
+<?php /* Blog page */
+
+
+genesis(); ?>
