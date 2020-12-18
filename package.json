@@ -7,6 +7,12 @@
     "sass": "sass --watch --style=compressed assets/sass/weart.scss:style.css assets/sass/editor.scss:assets/css/editor.min.css"
   },
   "devDependencies": {
-    "sass": "^1.30.0"
+    "bourbon": "^7.0.0",
+    "include-media": "^1.4.9",
+    "sass": "^1.30.0",
+    "sassy-normalize": "^8.0.5"
+  },
+  "dependencies": {
+    "normalize-scss": "^7.0.1"
   }
 }

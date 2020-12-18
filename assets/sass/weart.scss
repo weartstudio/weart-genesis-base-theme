@@ -1,9 +1,13 @@
 /*! 
 Theme Name: Weart Genesis Base
-Description: This is the sample theme created for the Genesis Framework.
-Author: Weart Studio
+Description: A starter Child theme for Genesis Framework. Grid system, npm, and more.
+Author: Weart.hu
 Author URI: https://weart.hu/
 Template: genesis
 Text Domain: weart
 */
 
+/* NODE SASS MODULES */
+@import "../../node_modules/sassy-normalize/normalize.scss";
+@import "../../node_modules/bourbon/core/bourbon";
+@import "../../node_modules/include-media/dist/include-media"; 
