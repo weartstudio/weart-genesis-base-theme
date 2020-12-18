@@ -4,7 +4,7 @@
   "description": "A starter Child theme for Genesis Framework. Grid system, npm, and more.",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch --style=compressed assets/sass/weart.scss:assets/dist/weart.min.css assets/sass/editor.scss:assets/dist/editor.min.css"
+    "sass": "sass --watch --style=compressed assets/sass/weart.scss:style.css assets/sass/editor.scss:assets/css/editor.min.css"
   },
   "devDependencies": {
     "sass": "^1.30.0"
