@@ -1,25 +1,99 @@
-p {
-    margin: 0 0 $gap * 2;
-    padding: 0;
-}
-small, .text_small {font-size: $s-meta}
+// basics
+	html{
+		-moz-osx-font-smoothing: grayscale;
+		-webkit-font-smoothing: antialiased;
+	}
+	body{
+		background-color: #fff;
+		overflow-x: hidden;
+		font-family: $f-text;
+		color: $c-text;
+		font-size: 16px;
+		line-height: 1.65;
+		font-weight: $fw-text;
+	}
+// end
 
-// headings
-h1,	h2,	h3,	h4,	h5,	h6,
-.h1, .h2, .h3, .h4, .h5, .h6 {
-    margin: 0 0 20px;
-    font-family: $f-title;
-    font-weight: $fw-normal;
-    line-height: 1.2;
-}
-h1,.h1 { font-size: $s-h1; }
-h2,.h2 { font-size: $s-h2; }
-.entry-content h3,
-.entry-content h4 {
-    font-weight: $fw-bold;
-}
-h3,.h3 { font-size: $s-h3; }
-h4,.h4 { font-size: $s-h4; }
-.entry-content h4 {	margin-top: 40px; }
-h5,.h5 { font-size: $s-h5; }
-h6,.h6 { font-size: $s-h6; }
+// titles
+	h1,h2,h3,h4,h5,h6,
+	.h1,.h2,.h3,.h4,.h5,.h6{
+		font-family: $f-title;
+		color: $c-1;
+		margin: 1.5rem 0;
+		line-height: 1.15em;
+		margin: 2rem 0;
+		font-weight: $fw-title;
+	}
+
+	h1,.h1 {font-size: $s-h1;}
+	h2,.h2 {font-size: $s-h2;}
+	h3,.h3 {font-size: $s-h3;}
+	h4,.h4 {font-size: $s-h4;}
+	h5,.h5 ,
+	.widget-title,
+	h6,.h6 {
+		font-size: $s-h5;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		font-weight: normal;
+		margin-top: 1rem;
+	}
+	.widget-title,h6,.h6 {font-size: $s-h6;}
+	.large{
+		font-size: $s-h1 * 1.25;
+		margin-bottom: 2rem;
+	}
+	.one-third .entry-title{
+		font-size: $s-h4;
+		a{
+			text-decoration: none;
+		}
+	}
+	@include media("<=tablet"){
+		.large,
+		h1,.h1 {font-size: $s-h2;}
+		h2,.h2 {font-size: $s-h3;}
+		h3,.h3 {font-size: $s-h4;}
+	}
+	@include media("<=phone"){
+		h1,.h1 {font-size: $s-h3;}
+		h2,.h2 {font-size: $s-h4;}
+	}
+	.archive-title,
+	.page-title{
+		@extend .h2;
+	}
+// end
+
+// paragrahp
+	p{
+		margin-bottom: 1.15rem;
+	}
+	small, .text_small {font-size: $s-meta}
+// end
+
+// link
+	a{
+		color: $c-1;
+		text-decoration: none;
+		transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+		&:hover{
+			color: $c-2;
+		}
+	}
+// end
+
+// other
+	blockquote,
+	cite,
+	em,
+	i {
+		font-style: italic;
+	}
+// end
+
+// editor-font-sizes
+	.has-small-font-size{ font-size: $s-small; }
+	.has-normal-font-size{ font-size: $s-normal; }
+	.has-middle-font-size{ font-size: $s-middle; }
+	.has-big-font-size{ font-size: $s-big; }

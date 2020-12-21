@@ -1,0 +1,77 @@
+#comments{
+    h3{
+        font-size: 24px;
+        margin: 2rem 0 0;
+    }
+    @include media('>=tablet'){
+        max-width: 800px;
+        margin: $gap auto;
+    }
+    .comment-list{
+        margin: $gap 0;
+        .comment{
+            position: relative;
+            border-top: 1px solid $c-border;
+            margin-top: $gap;
+            padding-top: $gap;
+            .comment-header{
+                color: $c-meta;
+                .avatar{
+                    float: left;
+                    margin-right: $gap;
+                    border-radius: 50%;
+                    @include shadow;
+                }
+                .comment-author-name{
+                    font-weight: bold;
+                }
+                p, a{
+                    margin: 0;
+                    font-size: $s-meta;
+                    text-transform: uppercase;
+                }
+            }
+            .comment-content{
+                margin-left: 64px;
+            }
+            article{
+                position: relative;
+            }
+            .comment-reply{
+                position: absolute;
+                font-size: $s-meta;
+                text-transform: uppercase;
+                right: 0;
+                bottom: 0;
+            }
+        }
+        .children{
+            margin-left: $gap *2
+        }
+    }
+}
+
+#respond{
+    h3{
+        font-size: 24px;
+        margin: 3rem 0 0;
+        small{
+            margin-left: 1rem;
+        }
+    }
+    @include media('>=tablet'){
+        max-width: 800px;
+        margin: $gap auto;
+    }
+    .comment-form-author,
+    .comment-form-email,
+    .comment-form-url{
+        max-width: 300px;
+    }
+
+    #commentform{
+        label{
+            font-size: $s-meta;
+        }
+    }
+}

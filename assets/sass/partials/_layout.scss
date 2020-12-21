@@ -1,0 +1,82 @@
+.site-container{
+	@include overflow-wrap;
+    -webkit-animation: fadein 1s;
+	animation: fadein 1s;
+}
+
+@keyframes fadein {
+	from { opacity: 0; }
+	to { opacity: 1; }
+}
+
+@-webkit-keyframes fadein {
+	from { opacity: 0; }
+	to { opacity: 1; }
+}
+
+.site-inner{
+	@include clearfix;
+    @include padding(null 2rem);
+    @include margin(null auto);     
+    @include media('>desktop'){
+        max-width: 1140px;
+		margin-top: 4.375rem; //70px
+    }
+}
+
+// blog-loop
+	article.one-third{
+		@include media(">=desktop"){
+			float: left;
+			width: calc(100% / 3 - .75rem);
+			margin-left: 1rem;
+		}
+		&.first{
+			margin-left: 0;
+		}
+	}
+// end
+
+/* 	.full-width-content,
+	.page-template-wide{
+		&.page,
+		&.single{
+			.entry-header{
+				@include media(">=tablet"){
+					max-width: 800px;
+					margin: 0 auto;
+				}
+			}
+			.entry-content{
+				@include media(">=tablet"){
+					margin: 0 auto;
+					max-width: 800px;
+				}
+				@include clearfix;
+			}
+		}
+		.content {
+			float: none;
+			margin-left: auto;
+			margin-right: auto;
+		}
+	} */
+
+
+// siedbar
+	@include media(">=desktop"){
+		.sidebar-content,
+		.content-sidebar{
+			.content-sidebar-wrap{
+				display: flex;
+				gap: $gap * 2;
+				.content{
+					flex: 0 0 65%;
+				}
+			}
+		}
+		.sidebar-content .content-sidebar-wrap {
+			flex-direction: column-reverse;
+		}
+	}
+// end

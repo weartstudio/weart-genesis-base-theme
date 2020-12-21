@@ -17,12 +17,17 @@ Text Domain: weart
 @import "modules/mixins";
 
 /* partials */
-@import "partials/defaults";
-@import "partials/layouts";
-@import "partials/header";
-@import "partials/menu";
-@import "partials/footer";
-@import "partials/forms";
 @import "partials/fonts";
+@import "partials/layout";
+@import "partials/header";
+@import "partials/footer";
+@import "partials/menu";
+@import "partials/defaults";
+@import "partials/forms";
+@import "partials/gravity-form";
+@import "partials/comments";
+@import "partials/widgets";
+@import "partials/wp-gutenberg";  
 
 /* woo */
+// @import "woo/woocommerce";  

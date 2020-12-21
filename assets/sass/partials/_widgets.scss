@@ -1,0 +1,105 @@
+.widget{
+    margin-bottom: $gap * 3;
+    p:last-child{ margin-bottom: 0; }
+
+    // lists
+        ul{
+
+            & > li {
+                margin-bottom: .5rem;
+                &:last-of-type {
+                    padding-bottom: 0;
+                    margin-bottom: 0; }
+            }
+
+        }
+        ol{
+            & > li{
+                list-style-position: inside;
+                list-style-type: decimal;
+                padding-left: 20px;
+                text-indent: -20px;
+            }
+        }
+        li li {
+            border: 0;
+            margin: 0 0 0 30px;
+            padding: 0;
+        }
+    // end
+
+    .tagcloud{
+        @include clearfix;
+        a{
+            display: block;
+            float: left;
+            padding: .5rem 1rem;
+            margin: 0 .5rem .5rem 0;
+            background: $c-light;
+            text-transform: uppercase;
+            &:hover{ background: $c-1; color: white }
+        }
+    }
+
+} // default widget
+
+.user-profile{
+    img{
+        border-radius: 50%;
+    }
+    span.alignleft{
+        margin-right: $gap;
+    }
+    span.alignright{
+        margin-left: $gap;
+    }
+    .posts-link{
+        text-align: center;
+        a{
+            color: white;
+            padding: .8rem 1.35rem;
+            background-color: #000;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            border: 1px solid #000;
+            letter-spacing: 1px;
+            display: inline-block;
+            text-align: center;
+            text-decoration: none;
+            overflow-wrap: break-word;
+            border-radius: 28px;
+            &:hover{
+                background-color: transparent;
+                color: #000;
+                border-color: #000;
+            }
+        }
+    }
+} // user profile
+
+.widget_calendar table {
+    width: 100%;
+    th,td{
+        text-align: center;
+    }
+} // calendar
+
+.widget_rss{
+    li{
+
+        a.rsswidget{
+            @extend .h4;
+            display: block;
+            font-size: 1.25rem !important;
+        }
+        span.rss-date{
+            text-transform: uppercase;
+            margin: 0 0 1rem 0;
+            font-weight: bold;
+            display: block;
+        }
+        div.rssSummary{
+            margin-bottom: 1rem;
+        }
+    }
+} // rss

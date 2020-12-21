@@ -1,159 +1,103 @@
-input,
-select,
-textarea {
-    width: 100%;
-    padding: 15px;
-    border: 1px solid #ddd;
-    color: $forms--font-color;
-    background-color: $forms__background-color;
-    font-size: $forms--font-size;
-    font-weight: $fw-normal;
-}
 
-input:focus,
-textarea:focus {
-    border: 1px solid #999;
-    outline: none;
-}
+	// woo select
+    .select2-container--default .select2-selection--single{
+        border-radius: 0;
+        border-color: $c-border;	
+        height: 38px;
+        display: flex;align-items: center;
+    }
+// end
 
-input[type="checkbox"],
-input[type="image"],
-input[type="radio"] {
-    width: auto;
-}
+// input
+    input,
+    select,
+    textarea {
+        background-color: #fff;
+        border: 1px solid $c-border;
+        padding: .5rem 1rem;
+        width: 100%;
+        &:focus{
+            border: 1px solid $c-1;
+            outline: none;
+        }
+    }
+// end
 
-::-moz-placeholder {
-    opacity: 1;
-    color: $dark-grey;
-}
+// checkbox, radio
+    input[type="checkbox"],
+    input[type="image"],
+    input[type="radio"] {
+        width: auto;
+    }
+// end
 
-::-webkit-input-placeholder {
-    color: $dark-grey;
-}
+// placeholder
+    ::-ms-input-placeholder {
+        color: $c-meta;
+        opacity: 1;
+    }
+    :-ms-input-placeholder {
+        color: $c-meta;
+        opacity: 1;
+    }
+    ::placeholder {
+        color: $c-meta;
+        opacity: 1;
+    }
+// end
 
-button {
-    width: auto;
-    padding: 15px 30px;
-    border: 0;
-    color: $button--font-color;
-    background-color: $button--background-color;
-    font-size: $button--font-size;
-    font-weight: $fw-bold;
-    white-space: normal;
-    text-decoration: none;
-    cursor: pointer;
-
-    &:focus,
-    &:hover {
-        color: $button--font-color-hover;
-        background-color: $button--background-color-hover;
+// button
+    button,
+    input[type="button"],
+    input[type="reset"],
+    input[type="submit"],
+    .button {
+        background-color: $c-1;
+        border: 0;
+        color: white;
+        cursor: pointer;
+        font-weight: bold;
+        padding: .75rem 1rem;
+        text-align: center;
+        text-decoration: none;
+        white-space: normal;
+        width: auto;
+        &:focus,
+        &:hover{
+            background-color: $c-2;
+            border-width: 0;
+            color: #fff;
+        }
     }
 
-    &.small {
-        padding: 8px 16px;
-    }
-}
-
-input[type="button"] {
-    width: auto;
-    padding: 15px 30px;
-    border: 0;
-    color: $button--font-color;
-    background-color: $button--background-color;
-    font-size: $button--font-size;
-    font-weight: $fw-bold;
-    white-space: normal;
-    text-decoration: none;
-    cursor: pointer;
-
-    &:focus,
-    &:hover {
-        color: $button--font-color-hover;
-        background-color: $button--background-color-hover;
+    .site-container button:disabled,
+    .site-container button:disabled:hover,
+    .site-container input:disabled,
+    .site-container input:disabled:hover,
+    .site-container input[type="button"]:disabled,
+    .site-container input[type="button"]:disabled:hover,
+    .site-container input[type="reset"]:disabled,
+    .site-container input[type="reset"]:disabled:hover,
+    .site-container input[type="submit"]:disabled,
+    .site-container input[type="submit"]:disabled:hover {
+        background-color: #eee;
+        border-width: 0;
+        color: #777;
+        cursor: not-allowed;
     }
 
-    &.small {
-        padding: 8px 16px;
+    // search extended buttons no display
+        input[type="search"]::-webkit-search-cancel-button,
+        input[type="search"]::-webkit-search-results-button {
+            display: none;
+        }
+    // end
+
+// end
+
+// search form
+    .search-form{
+        display: grid;
+        grid-template-columns: auto 100px;
     }
-}
-
-input[type="reset"] {
-    width: auto;
-    padding: 15px 30px;
-    border: 0;
-    color: $button--font-color;
-    background-color: $button--background-color;
-    font-size: $button--font-size;
-    font-weight: $fw-bold;
-    white-space: normal;
-    text-decoration: none;
-    cursor: pointer;
-
-    &:focus,
-    &:hover {
-        color: $button--font-color-hover;
-        background-color: $button--background-color-hover;
-    }
-
-    &.small {
-        padding: 8px 16px;
-    }
-}
-
-input[type="submit"] {
-    width: auto;
-    padding: 15px 30px;
-    border: 0;
-    color: $button--font-color;
-    background-color: $button--background-color;
-    font-size: $button--font-size;
-    font-weight: $fw-bold;
-    white-space: normal;
-    text-decoration: none;
-    cursor: pointer;
-
-    &:focus,
-    &:hover {
-        color: $button--font-color-hover;
-        background-color: $button--background-color-hover;
-    }
-
-    &.small {
-        padding: 8px 16px;
-    }
-}
-
-.button {
-    display: inline-block;
-    width: auto;
-    padding: 15px 30px;
-    border: 0;
-    color: $button--font-color;
-    background-color: $button--background-color;
-    font-size: $button--font-size;
-    font-weight: $fw-bold;
-    white-space: normal;
-    text-decoration: none;
-    cursor: pointer;
-    text-align: center;
-
-    &:focus,
-    &:hover {
-        color: $button--font-color-hover;
-        background-color: $button--background-color-hover;
-    }
-
-    .entry-content &:focus,
-    .entry-content &:hover {
-        color: $button--font-color-hover;
-    }
-}
-
-a.button.small {
-    padding: 8px 16px;
-}
-
-input[type="search"]::-webkit-search-cancel-button,
-input[type="search"]::-webkit-search-results-button {
-    display: none;
-}
+// end
