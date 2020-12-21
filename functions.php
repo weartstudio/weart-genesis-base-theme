@@ -102,7 +102,7 @@ include_once( get_template_directory() . '/lib/init.php' );
                 $classes[] = 'first';
             return $classes;
         }
-        add_filter( 'post_class', 'be_archive_post_class' );
+        // add_filter( 'post_class', 'be_archive_post_class' );
     // end
 
     // swap title and image

@@ -63,6 +63,25 @@
 	.page-title{
 		@extend .h2;
 	}
+
+	.entry-title{ 
+		@extend .h2;
+		margin-top: 0;
+	}
+// end
+
+// meta
+	.entry-meta{
+		font-size: $s-meta;
+		font-style: italic;
+		color: $c-meta;
+		.entry-author,
+		.entry-time{ 
+			&:after{
+				content: " · "
+			}
+		}
+	}
 // end
 
 // paragrahp

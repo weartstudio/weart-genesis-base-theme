@@ -19,8 +19,6 @@
                 .avatar{
                     float: left;
                     margin-right: $gap;
-                    border-radius: 50%;
-                    @include shadow;
                 }
                 .comment-author-name{
                     font-weight: bold;

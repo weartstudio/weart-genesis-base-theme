@@ -1,0 +1,50 @@
+.wp-custom-logo{
+    img.custom-logo{
+        max-height: 40px;
+        max-width: 100%;
+        width: auto;
+        height: auto;
+    }
+    .site-title,
+    .site-description{
+        display: none;
+    }
+}
+
+.site-header{
+    @include padding( $gap null );
+    background: $c-light;
+
+    .title-area{
+        display: flex;
+        align-items: center;
+        *{ margin: 0 5px 0 0; }
+        .site-title{
+            font-family: $f-title;
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+        .site-description{
+            display: none;
+        }  
+    }
+
+    & > .wrap{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+        z-index: 2;
+        max-width: $content-width;
+        @include margin(null auto);
+        @include padding(null $gap)
+    }
+
+    .weart-menu-right{
+        display: flex;
+        align-items: center;
+        & > a{
+            margin-left: $gap / 2;
+        }
+    }
+}

@@ -1,19 +1,19 @@
 // logo display, text no display
-	body.wp-custom-logo{
-		img.custom-logo{
-			max-height: 40px;
-			width: auto;
-			height: auto;
-			max-width: 100%;
-		}
-		.site-title,
-		.site-description{
-			display: none;
-		}
-	}
-	.site-description{
-		display: none;
-	}
+	// body.wp-custom-logo{
+	// 	img.custom-logo{
+	// 		max-height: 40px;
+	// 		width: auto;
+	// 		height: auto;
+	// 		max-width: 100%;
+	// 	}
+	// 	.site-title,
+	// 	.site-description{
+	// 		display: none;
+	// 	}
+	// }
+	// .site-description{
+	// 	display: none;
+	// }
 // end
 
 // responsive menu icon
@@ -36,45 +36,6 @@
 // end
 
 // nav
-	.site-header{
-		padding: 1rem 0;
-
-		.title-area{
-			display: flex;
-			align-items: center;
-			*{ margin: 0 5px 0 0; }
-			.site-title{
-				font-family: $f-title;
-				font-weight: bold;
-				font-size: 1.5rem;
-			}
-			.site-description{
-				@include media("<=phone"){
-					display: none;
-				}
-			}  
-		}
-
-		.wrap{
-			display: flex;
-			align-items: center;
-			justify-content: space-between;
-			position: relative;
-			z-index: 2;
-			.nav-primary .wrap{
-				padding: 0;
-			}
-		}
-
-		.weart-menu-right{
-			display: flex;
-			align-items: center;
-			& > a{
-				margin-left: 7.5px;
-			}
-		}
-	}
-
 	.genesis-nav-menu{
 		ul{ display: none; }
 		padding: 0;
@@ -113,6 +74,7 @@
 					width: auto;
 					margin-left: .3rem;
 					content: '\f107';
+					font-weight: bold;
 					font-family: $f-awesome;
 				}
 				&:hover:before{
@@ -143,7 +105,7 @@
 		}
 	}
 
-	// footer menu
+	// secondary
 	.nav-secondary .wrap{
 		display: flex;
 		justify-content: center;
@@ -169,11 +131,11 @@
 @include media('<=tablet'){
 	#genesis-mobile-nav-primary:before{
 		content: "\f0c9" !important;
+		font-weight: bold;
 		font-family: $f-awesome;
 	}
 	#genesis-mobile-nav-primary.activated:before{
 		content: "\f00d" !important;
-		font-family: $f-awesome;
 	}
 	.site-header{
 		.nav-primary{

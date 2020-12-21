@@ -28,10 +28,10 @@
 .site-footer{
     text-align: center;
     font-size: $s-meta;
-    padding: $gap*1.5 0;
+    @include padding($gap null);
     font-size: $s-meta;
     color: $c-meta;
-    border-top: 1px solid $c-border;
+    background: $c-light;
     ul ul { display: none; }
 }
 

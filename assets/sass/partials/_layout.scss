@@ -16,7 +16,7 @@
 
 .site-inner{
 	@include clearfix;
-    @include padding(null 2rem);
+    @include padding(null $gap);
     @include margin(null auto);     
     @include media('>desktop'){
         max-width: 1140px;
