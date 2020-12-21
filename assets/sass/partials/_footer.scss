@@ -1,0 +1,44 @@
+.footer-widgets {
+    @include clearfix;
+    @include padding($gap * 4 null);
+	border-top: $border;
+	font-size: $s-widget;
+
+	.wrap {
+        @include margin(null auto);
+        @include media('>desktop'){
+            max-width: $content-width;
+        }
+	}
+
+	.widget:last-child {
+        @include margin(null null 0);
+	}
+}
+
+.footer-widget-area {
+	margin-bottom: 40px;
+    @include padding(null $gap * 2);
+    @include media('>desktop'){
+        float: left;
+        width: 33.33%;
+        width: calc(100% / 3);
+        @include margin(null null 0);
+    }
+
+	&:last-child {
+        @include margin(null null 0);
+	} 
+}
+
+.site-footer {
+	@include padding( $gap * 2 $gap );
+	border-top: $border;
+	background-color: #fff;
+	font-size: $s-footer;
+	text-align: center;
+
+	p {
+        @include margin(null null 0);
+	}
+}

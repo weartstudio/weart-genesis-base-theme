@@ -11,3 +11,18 @@ Text Domain: weart
 @import "../../node_modules/sassy-normalize/normalize.scss";
 @import "../../node_modules/bourbon/core/bourbon";
 @import "../../node_modules/include-media/dist/include-media"; 
+
+/* modules */
+@import "modules/vars";
+@import "modules/mixins";
+
+/* partials */
+@import "partials/defaults";
+@import "partials/layouts";
+@import "partials/header";
+@import "partials/menu";
+@import "partials/footer";
+@import "partials/forms";
+@import "partials/fonts";
+
+/* woo */
