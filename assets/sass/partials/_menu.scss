@@ -1,0 +1,26 @@
+.genesis-nav-menu{
+    display: flex;
+    align-items: center;
+    
+    // menu-element
+        li{
+            display: block;
+            position: relative;
+            a{
+                display: block;
+                @include padding(1rem 1.5rem);
+            }
+
+            // submenu
+                & > ul{ display: none; }
+                &:hover > ul{ display: block; }
+                ul{
+                    @include position(absolute, 100% null null 0);
+                    ul{ @include position(absolute, 0 null null 100%);}
+                    @include shadow;
+                }
+            // end
+        }
+    // end
+
+}

@@ -1,3 +1,9 @@
 @mixin transition($duration: 0.2s){
     transition: all $duration ease-in-out;
 }
+
+@mixin  shadow {
+    -webkit-box-shadow:  -2px 12px 24px rgba(153,153,153,0.2);
+    -mox-box-shadow:  -2px 12px 24px rgba(153,153,153,0.2);
+    box-shadow: -2px 12px 24px rgba(153,153,153,0.2);
+  }

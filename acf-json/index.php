@@ -1,2 +1,2 @@
 <?php
-//Silence is golden
+/* Save the fields settings json automatically with ACF. */
