@@ -19,7 +19,7 @@
     @include padding(null $gap);
     @include margin(null auto);     
     @include media('>desktop'){
-        max-width: 1140px;
+        max-width: $content-width;
 		margin-top: 4.375rem; //70px
     }
 }
@@ -29,7 +29,7 @@
 		@include media(">=desktop"){
 			float: left;
 			width: calc(100% / 3 - .75rem);
-			margin-left: 1rem;
+			margin-left: $gap;
 		}
 		&.first{
 			margin-left: 0;
@@ -37,19 +37,15 @@
 	}
 // end
 
-/* 	.full-width-content,
+// full
+	.full-width-content,
 	.page-template-wide{
 		&.page,
 		&.single{
-			.entry-header{
-				@include media(">=tablet"){
-					max-width: 800px;
-					margin: 0 auto;
-				}
-			}
+			.entry-header,
 			.entry-content{
 				@include media(">=tablet"){
-					margin: 0 auto;
+					@include margin(null auto);
 					max-width: 800px;
 				}
 				@include clearfix;
@@ -57,11 +53,10 @@
 		}
 		.content {
 			float: none;
-			margin-left: auto;
-			margin-right: auto;
+			@include margin(null auto)
 		}
-	} */
-
+	}
+// end
 
 // siedbar
 	@include media(">=desktop"){
