@@ -8,8 +8,8 @@ $default_colors = [
 ];
 
 $fonts = [
-	'title'   => 'Aller Bold',
-	'text'   => 'Aller',
+	'title'   => 'Source Sans Pro',
+	'text'   => 'Source Sans Pro',
 ];
 
 $main_color = get_theme_mod( 'main_color', $default_colors['main'] );
@@ -17,6 +17,8 @@ $secondary_color = get_theme_mod( 'secondary_color', $default_colors['secondary'
 
 
 return [
+	'fonts-url'            => 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600,700&display=swap',
+	'fonts-icon'            => 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css',
 	'content-width'        => 800,
 	'default-colors'       => $default_colors,
 	'fonts'				   => $fonts,
@@ -45,12 +47,12 @@ return [
 		],
 		[
 			'name' => __( 'Közepes', 'weart' ),
-			'size' => 18,
-			'slug' => 'middle',
+			'size' => 22,
+			'slug' => 'mid',
 		],
 		[
 			'name' => __( 'Nagy', 'weart' ),
-			'size' => 32,
+			'size' => 42,
 			'slug' => 'big',
 		]
 	],

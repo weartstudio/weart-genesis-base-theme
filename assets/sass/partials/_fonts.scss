@@ -49,12 +49,14 @@
 	}
 
 	.archive-title,
-	.page-title,
-	.entry-title{ 
-		@extend .h2;
+	.page-title{ 
+		@extend .h3;
 		margin-top: 0;
 	}
-	.widget-title{ @extend .h5,.h6; }
+	.entry-title{
+		@extend .h2;
+	}
+	.widget-title{ @extend .h6; }
 // end
 
 // meta

@@ -12,11 +12,11 @@ Text Domain: weart
 @import "../../node_modules/bourbon/core/bourbon";
 @import "../../node_modules/include-media/dist/include-media"; 
 
-/* modules */
+/* MODULES */
 @import "modules/vars";
 @import "modules/mixins";
 
-/* partials */
+/* PARTIALS */
 @import "partials/fonts";
 @import "partials/layout";
 @import "partials/header";
@@ -24,10 +24,10 @@ Text Domain: weart
 @import "partials/menu";
 @import "partials/defaults";
 @import "partials/forms";
-@import "partials/gravity-form";
+@import "partials/plugins";
 @import "partials/comments";
 @import "partials/widgets";
 @import "partials/wp-gutenberg";  
 
-/* woo */
+/* WOOCOMMERCE */
 // @import "woo/woocommerce";  

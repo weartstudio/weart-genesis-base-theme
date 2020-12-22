@@ -1,3 +1,113 @@
-body{
-    color: #ddd;
-}
+@import 'modules/mixins';
+@import 'modules/vars';
+
+// basics
+    body {
+        color: $c-text;
+        font-family: $f-text;
+        font-size: 16px;
+        line-height: 1.65;
+        font-weight: $fw-text;
+    }
+
+    p,
+    ul,
+    ol,
+    dl {
+        font-size: 1rem;
+        margin-bottom: 1.15rem;
+    }
+// end
+
+// alignment
+    .wp-block {
+        max-width: 732px;
+    }
+
+    .wp-block[data-align="wide"] {
+        max-width: 1092px;
+    }
+
+    .wp-block[data-align="full"] {
+        max-width: none;
+    }
+// end
+
+// texts
+    a {
+        color: $c-2;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        margin: 0 0 20px;
+        font-family: $f-title;
+        font-weight: $fw-title;
+        line-height: 1.2;
+    }
+
+    h1 { font-size: $s-h1; }
+    h2 { font-size: $s-h2; }
+    h3 { font-size: $s-h3; }
+    h4 { font-size: $s-h4; }
+    h4 { font-size: $s-h5; }
+    h4 { font-size: $s-h6; }
+
+    // main-title
+    .editor-post-title__block .editor-post-title__input {
+        font-family: $f-title;
+        font-size: $s-h1;
+        font-weight: $fw-title;
+        line-height: 1.2;
+        margin: 0 0 $gap * 1.5;
+    }
+// end
+
+// gallery
+    .wp-block-gallery .blocks-gallery-item {
+        margin-bottom: $gap;
+    }
+// end
+
+// category-block
+    .wp-block[data-align="right"] .wp-block-categories__list {
+        text-align: right;
+    }
+
+    .wp-block[data-align="full"] .wp-block-categories__list {
+        padding: 0 $gap * 2;
+    }
+// end
+
+// latest-posts
+    .wp-block[data-align="center"] .wp-block-latest-posts {
+        text-align: center;
+    }
+
+    .wp-block[data-align="full"] .wp-block-latest-posts {
+        padding: 0 $gap * 2;
+    }
+// end
+
+// columns
+    .wp-block[data-align="full"] .wp-block-columns > .editor-inner-blocks {
+        padding: 0 $gap * 2;
+    }
+// end
+
+// table
+    .wp-block-table {
+        font-size: 1rem;
+        line-height: 1.65rem;
+        td, th, tr { border: none; }
+        tr { border-top: 1px solid $c-border; }
+        tbody { border-bottom: 1px solid $c-border; }
+    }
+
+// end
+
+// lists
+    .editor-block-list__block li {
+        line-height: 1.5;
+        margin-bottom: 0;
+    }
+// end

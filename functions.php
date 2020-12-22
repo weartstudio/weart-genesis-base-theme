@@ -41,10 +41,20 @@ include_once( get_template_directory() . '/lib/init.php' );
 
         $appearance = genesis_get_config( 'appearance' );
 
-        // font awesome
+        // fonts
+		wp_enqueue_style(
+			genesis_get_theme_handle() . '-fonts',
+			$appearance['fonts-url'],
+			[],
+			genesis_get_theme_version()
+		);
+
+        // icons
         wp_enqueue_style(
-            'weart-fontawesome',
-            '//cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css' 
+            genesis_get_theme_handle() . '-icons',
+			$appearance['fonts-icon'],
+            [],
+            genesis_get_theme_version()
         );
 
         // slider theme style
@@ -65,7 +75,7 @@ include_once( get_template_directory() . '/lib/init.php' );
         // main theme script
         wp_enqueue_script(
             'weart-weart',
-            get_stylesheet_directory_uri() . '/assets/weart.js',
+            CHILD_URL . '/assets/js/weart.js',
             array('jquery'),
             null,
             true
@@ -79,6 +89,7 @@ include_once( get_template_directory() . '/lib/init.php' );
 
     get_template_part( 'lib/remove' );
     get_template_part( 'lib/gutenberg' );
+    get_template_part( 'lib/acf' );
 
 // end
 

@@ -11,8 +11,5 @@
     "include-media": "^1.4.9",
     "sass": "^1.30.0",
     "sassy-normalize": "^8.0.5"
-  },
-  "dependencies": {
-    "normalize-scss": "^7.0.1"
   }
 }

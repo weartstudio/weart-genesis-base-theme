@@ -1,12 +1,29 @@
 <?php
+$weart_appearance = genesis_get_config( 'appearance' );
 
-// Add support for editor styles.
+
+// Add support for editor styles for non gutenberg
 	add_theme_support( 'editor-styles' );
-	add_editor_style( '/assets/editor.css' );
+	add_editor_style( '/assets/css/editor.min.css' );
+// end
+
+// gutenberg editor style
+	add_action( 'enqueue_block_editor_assets', 'genesis_sample_block_editor_styles' );
+	function genesis_sample_block_editor_styles() {
+
+		$appearance = genesis_get_config( 'appearance' );
+
+		wp_enqueue_style(
+			genesis_get_theme_handle() . '-gutenberg-fonts',
+			$appearance['fonts-url'],
+			[],
+			genesis_get_theme_version()
+		);
+
+	}
 // end
 
 // basic settinc from appearance.php
-	$weart_appearance = genesis_get_config( 'appearance' );
 	add_theme_support(
 		'editor-font-sizes',
 		$weart_appearance['editor-font-sizes']
