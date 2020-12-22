@@ -6,9 +6,9 @@ Just install the system with `npm install` and run the watcher by `npm run sass`
 
 - [x] ACF folder for field saving
 - [x] Home Page/Blog page defaault template
-- [ ] Gravity Forms support
+- [x] Gravity Forms support
 - [ ] ACF default files / option, and block
-- [ ] FontAwesome built in
+- [x] FontAwesome built in
 - [ ] Gutenberg support
-- [ ] Genesis configurator files
+- [x] Genesis configurator files
 - [ ] WooCommerce support
