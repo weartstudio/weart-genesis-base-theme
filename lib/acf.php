@@ -43,9 +43,16 @@ function weart_acf_init_block_types() {
     // ADD blocks
 		if( function_exists('acf_register_block_type') ) {
 
-			foreach ( glob( CHILD_DIR . '/lib/blocks/*.php' ) as $file ) {
-				require_once $file;
-			}
+			acf_register_block_type(array(
+				'name'              => 'sample',
+				'title'             => __('Sample Block'),
+				'className'         => 'sample',
+				'render_template'   => 'lib/blocks/sample.php',
+				'category'          => 'weart',
+				'icon'              => 'editor-paste-word',
+				'keywords'          => array( 'sample', 'weart' ),
+				'align'				=> 'full', // align
+			));
 
 		}
 	// end

@@ -3,18 +3,6 @@
  * ACF Custom Block 
  * */
 
-//  register the block
-acf_register_block_type(array(
-    'name'              => 'sample',
-    'title'             => __('Sample Block'),
-    'className'         => 'sample',
-    'render_template'   => 'lib/blocks/sample.php',
-    'category'          => 'weart',
-    'icon'              => 'editor-paste-word',
-    'keywords'          => array( 'sample', 'weart' ),
-    'align'				=> 'full', // align
-));
-
 // unique id / class
 $id = ( !empty($block['anchor']) ) ? $block['anchor'] : "weart-".$block['id'];
 $className = ( !empty($block['className']) ) ? ' weart-block '.$block['className'] : " weart-block ";

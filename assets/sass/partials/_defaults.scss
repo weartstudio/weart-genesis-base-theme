@@ -102,9 +102,9 @@
 	}
 
 	blockquote {
-		border-left: 2px solid $c-2;
+		border-left: 3px solid $c-2;
 		@include margin( $gap * 1.5 $gap * 1.5 $gap * 1.5 0);
-		@include padding(.5rem 0 $gap *2);
+		@include padding(0 0 0 $gap);
 		cite{
 			font-size: $s-meta;
 			color: $c-meta;
@@ -147,35 +147,33 @@
 	.aligncenter,
 	.singular-image {
 		display: block;
-		margin: 0 auto 30px;
+		@include margin( 0 auto $gap * 2 )
 	}
 
 	img.alignnone,
 	.alignnone {
-		margin-bottom: 15px;
+		margin-bottom: $gap;
 	}
 
 	a.alignleft,
 	img.alignleft,
 	.wp-caption.alignleft {
-		margin: 0 20px 20px 0;
+		@include margin( 0 $gap $gap 0 )
 	}
 
 	a.alignright,
 	img.alignright,
 	.wp-caption.alignright {
-		margin: 0 0 20px 20px;
+		@include margin( 0 0 $gap $gap )
 	}
 
 	figcaption,
 	.gallery-caption,
 	.wp-caption-text {
-		font-size: 14px;
-		font-weight: 600;
-		margin-top: 0.5em;
-		margin-bottom: 1em;
-		padding-left: 10px;
-		padding-right: 10px;
+		font-size: $s-meta;
+		font-weight: bold;
+		@include padding( 0.5em null 1em );
+		@include margin( null $gap );
 		text-align: center;
 	}
 
@@ -186,7 +184,41 @@
 	.entry-content .wp-audio-shortcode,
 	.entry-content .wp-playlist,
 	.entry-content .wp-video {
-		margin: 0 0 30px;
+		@include margin( 0 0 $gap * 2 );
+	}
+// end
+
+// entry
+	.entry-content {
+		ol, ul {
+			margin-bottom: $gap;
+			margin-left: $gap;
+		}
+		ol {
+			& > li {
+				list-style-type: decimal;
+			}
+			ol {
+				margin-bottom: 0;
+			}
+		}
+		ul {
+			& > li {
+				list-style-type: disc;
+			}
+			ul {
+				margin-bottom: 0;
+			}
+		}
+		code {
+			background-color: $c-light;
+			color: $c-meta;
+		}
+		p {
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
 	}
 // end
 

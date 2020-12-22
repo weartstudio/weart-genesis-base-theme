@@ -1,5 +1,4 @@
-
-	// woo select
+// woo select
     .select2-container--default .select2-selection--single{
         border-radius: 0;
         border-color: $c-border;	
@@ -9,17 +8,23 @@
 // end
 
 // input
-    input,
     select,
-    textarea {
+    #{$all-text-inputs} {
         background-color: #fff;
         border: 1px solid $c-border;
-        padding: .5rem 1rem;
+        padding: .5rem 0;
+        text-indent: 1rem;
         width: 100%;
-        &:focus{
-            border: 1px solid $c-1;
-            outline: none;
-        }
+        max-width: 100%;
+    }
+    select,
+    #{$all-text-inputs-hover}{
+        outline: none;
+    }
+    select:focus,
+    #{$all-text-inputs-focus} {
+        border: 1px solid $c-1;
+        outline: none;
     }
 // end
 
@@ -98,6 +103,6 @@
 // search form
     .search-form{
         display: grid;
-        grid-template-columns: auto 100px;
+        grid-template-columns: 1fr auto;
     }
 // end
