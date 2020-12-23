@@ -1,73 +1,77 @@
-body{
-
-	.gform_wrapper{
-		h3.gform_title{
-			font-weight: normal;
+// Gravity Forms
+div.gform_wrapper form{
+	div.gform_heading{
+		.gform_title{
 			@extend .h4;
+			border-bottom: 1px solid $c-border;
+			@include margin(0 null $gap);
+			padding-bottom: $gap;
 		}
 		.gform_description{
 			font-size: $s-meta;
-		}
+		} 
+	}
 
-		ul.gform_fields.top_label{
+	div.gf_progressbar_wrapper{
+		@include margin($gap * 1.5 null);
+		padding-bottom: 0;
+	}
 
-			.gfield{
-				margin-top: $gap * 1.5;
-				.gfield_label{
-					line-height: 1;
-					font-family: $f-title;
-					color: $c-1;
-					font-weight: $fw-title;
-					font-size: 1rem !important;
-					margin: 0;
-				}
-				div.ginput_container {
-					margin-top: 3px;
-
-					input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]),
-					textarea{
-						// border: 0px solid $c-border;
-						// border-bottom: 2px solid $c-border;
-						// box-shadow: 0px 10px 15px -15px rgba(0,0,0,0.25);
-						// background: transparent;
-						// padding: 1rem 0rem !important;
-						margin-bottom: 0 !important;
-					}
-					input.datepicker{
-						width: calc(100% - 24px);
-					}
-
-					label{
-						margin-bottom: 0;
-						color: $c-meta;
-						margin-top: .5rem;
-					}
-
-				}
-
+	div.gform_page_fields ul.gform_fields{
+		.gfield{
+			margin-top: $gap * 2;
+			&.gfield_error{ 
+				padding: 0;
+				background: transparent; border: 0; 
+				.ginput_container { background: $c-light }
 			}
-
-
-
-		}
-		.gform_footer input.button,
-		.gform_wrapper .gform_footer input[type=submit],
-		.gform_wrapper .gform_page_footer input.button,
-		.gform_wrapper .gform_page_footer input[type=submit]{
-			padding: .8rem 1.35rem;
-			background-color: transparent;
-			font-size: $s-meta;
-			text-transform: uppercase;
-			border: 2px solid $c-1;
-			letter-spacing: 1px;
-			font-weight: normal;
-			color: $c-1;
-			&:hover{
-				border-color: $c-2;
-				background: $c-2;
-				color: white !important;
+			.gfield_label{
+				@extend .h6;
+				@include margin(0 0 $gap / 2);
+				text-transform: none;
+				letter-spacing: 0;
+			}
+			.ginput_container {
+				margin-top: $gap / 3;
+				input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]),
+				select,
+				textarea{
+					border: 0px solid $c-border;
+					border-bottom: 2px solid $c-border;
+					background: transparent;
+					@include padding($gap / 1.5 0); 
+					margin-bottom: 0 !important;
+				}
+				input.datepicker{
+					width: calc(100% - 24px);
+				}
+				label, .gfield_description{
+					margin-bottom: 0;
+					color: $c-meta;
+					margin-top: $gap / 2;
+					font-size: $s-meta;
+					padding: 0;
+				}
 			}
 		}
 	}
 
+	/* .gform_footer input.button,
+	.gform_wrapper .gform_footer input[type=submit],
+	.gform_wrapper .gform_page_footer input.button,
+	.gform_wrapper .gform_page_footer input[type=submit]{
+		padding: .8rem 1.35rem;
+		background-color: transparent;
+		font-size: $s-meta;
+		text-transform: uppercase;
+		border: 2px solid $c-1;
+		letter-spacing: 1px;
+		font-weight: normal;
+		color: $c-1;
+		&:hover{
+			border-color: $c-2;
+			background: $c-2;
+			color: white !important;
+		}
+	} */
 }
