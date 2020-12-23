@@ -1,0 +1,54 @@
+// basic
+    .woocommerce{
+        a.button{
+            background: $c-1;
+            color: white;
+            font-size: $s-meta;
+            font-family: $f-title;
+            border-radius: 0;
+            &:hover{ background: $c-meta; color: white }
+        }
+        table{
+            border-radius: 0 !important;
+            border: 0px solid $c-border !important;
+            th{
+                text-transform: uppercase;
+                font-family: $f-title;
+                background: $c-light;
+            }
+        }
+        h2{
+            @extend .h4;
+        }
+        .button{
+            border-radius: 0 !important;
+            font-size: $s-meta !important;
+            padding: 1rem 2rem !important;
+            &.alt{
+                @extend .button;
+                &:hover{
+                    // @extend .button:hover;
+                }
+            }
+        }
+    }
+    body.woocommerce-checkout.full-width-content,
+    body.woocommerce-account.full-width-content,
+    body.woocommerce-cart.full-width-content{
+        .entry-content,
+        .entry-header{
+            max-width: 100% !important;
+            width: auto !important;
+        }
+    }
+// end
+
+// messages
+    .woocommerce-error, .woocommerce-info, .woocommerce-message{
+        background: $c-light;
+        color: $c-text;
+        border-color: $c-1;
+        font-size: $s-meta;
+        .showcoupon{ font-weight: bold; }
+    }
+// end

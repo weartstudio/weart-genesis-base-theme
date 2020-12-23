@@ -1,0 +1,37 @@
+// checkout
+body.woocommerce-checkout {
+    .checkout_coupon.woocommerce-form-coupon{
+        border: 0;
+        @include shadow;
+        padding: $gap;
+    }
+    #order_review{
+        // display: grid;
+        // grid-gap: $gap;
+        // padding: $gap;
+        @include shadow;
+        // @include media('>=tablet'){
+        //     grid-template-columns: 3fr 2fr;
+        // }
+        table.shop_table{
+            th.product-total{ min-width: 135px }
+        }
+        #payment{
+            background: transparent;
+            .payment_box {
+                background: $c-light;
+                &::before{ border-bottom-color: $c-light; }
+                *{ margin: 0; padding: 0; font-size: $s-meta; }
+            }
+            .woocommerce-privacy-policy-text{
+                a{ text-decoration: underline; }
+            }
+            button.button.alt{
+                @extend .button;
+                padding: 1.5rem 2rem;
+                width: 100%;
+            }
+        }
+    }
+}
+// end

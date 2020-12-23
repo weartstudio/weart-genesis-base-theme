@@ -1,0 +1,39 @@
+
+// account page
+body.woocommerce-account{
+    .woocommerce{
+        h2{
+            text-align: center;
+            &:after{ margin-left: auto; }
+        }
+        form.woocommerce-form {
+            max-width: 500px;
+            border: 0;
+            border-radius: 0;
+            @include shadow;
+            margin: auto;
+        }
+        .woocommerce-MyAccount-navigation{
+            ul{
+                padding: 0;
+                @include shadow;
+                background: white;
+                li{
+                    &::before{ display: none; }
+                    padding: 0;
+                    margin: 0;
+                    a{
+                        display: block;
+                        padding: .5rem 1rem;
+                        border-bottom: 1px solid $c-border;
+                       
+                        &:hover{ background: $c-light; }
+                    }
+                    &.is-active a{ background: $c-light; }
+                    &:last-child a{ border-bottom: 0; }
+                }
+            }
+        }
+    }
+}
+// end

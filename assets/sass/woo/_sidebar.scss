@@ -1,0 +1,100 @@
+
+// sidebar
+.widget.woocommerce{
+
+    ul.woocommerce-widget-layered-nav-list,
+    ul.product-categories{
+        .current-cat > a,
+        .current-cat > .count { 
+            // background: $c-1;
+            // color: white;
+            font-weight: bold;
+            border-bottom: 2px solid $c-1;
+        }
+        li{
+            border-top: 1px solid $c-border;
+            font-size: $s-meta;
+            margin: 0;
+            display: grid;
+            grid-template-columns: 1fr auto;
+            align-items: center;
+            a{
+                padding: $gap / 2;
+                display: block;
+                position: relative;
+            }
+            .count{
+                padding: $gap / 2; 
+
+            }
+            &.cat-parent{
+                & > a{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    &:after{
+                        content: '\f107';
+                        font-family: $f-awesome;
+                        font-weight: bold;
+                        
+                        
+                    }
+                }
+            }
+            .children{
+                grid-column: span 2;
+                background: rgba(black, .025);
+                li{ margin: 0; 
+                    border-top: 1px solid white;
+
+                }
+            }
+        }
+    }
+    
+    ul.product_list_widget{
+        li{
+            border-bottom: 1px solid $c-border;
+            padding: 1rem 0;
+            &:last-child { border: 0 }
+            padding-left: 4rem;
+            position: relative;
+            font-size: $s-meta !important;
+            line-height: 1.4;
+            min-height: 3rem;
+            *{ color: $c-meta }
+
+            a{
+                color: $c-1;
+                img{
+                    width: 3rem;
+                    position: absolute;
+                    left: 0;
+                    top: 1rem;
+                }
+                .product-title{
+                    margin-bottom: .5rem;
+                    display: block;
+                    color: $c-1
+                }
+            }
+        }
+    }   
+    
+    .price_slider_wrapper{
+        .ui-widget-content{
+            background: $c-light !important;
+            .ui-slider-range,
+            .ui-slider-handle { background: $c-1; }
+        } 
+        .button{
+            padding: .618em 1em !important
+        }
+    }
+
+    .woocommerce-product-search{
+        display: grid;
+        grid-template-columns: 1fr auto;
+    }
+}
+// end

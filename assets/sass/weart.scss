@@ -27,7 +27,7 @@ Text Domain: weart
 @import "partials/plugins";
 @import "partials/comments";
 @import "partials/widgets";
-@import "partials/wp-gutenberg";  
+@import "partials/wp-gutenberg";   
 
 /* WOOCOMMERCE */
-// @import "woo/woocommerce";  
+@import "woo/woocommerce";  
