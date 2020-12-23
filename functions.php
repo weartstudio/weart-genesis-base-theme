@@ -127,3 +127,32 @@ include_once( get_template_directory() . '/lib/init.php' );
     // end
 
 // end
+
+// search to menu
+add_filter( 'wp_nav_menu_items', 'theme_menu_extras', 10, 2 );
+function theme_menu_extras( $menu, $args ) {
+
+	//* Change 'primary' to 'secondary' to add extras to the secondary navigation menu
+	if ( 'primary' !== $args->theme_location )
+		return $menu;
+
+	//* Uncomment this block to add a search form to the navigation menu
+	
+	ob_start();
+	get_search_form();
+	$search = ob_get_clean();
+    $menu  .= '<li class="right search">';
+        $menu  .= $search;
+        $menu  .= '<i class="fas fa-search" id="weart-search-icon"></i>';
+    $menu  .= '</li>';
+	
+
+	//* Uncomment this block to add the date to the navigation menu
+	/*
+	$menu .= '<li class="right date">' . date_i18n( get_option( 'date_format' ) ) . '</li>';
+	*/
+
+	return $menu;
+
+}
+// end

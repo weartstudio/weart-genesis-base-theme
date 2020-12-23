@@ -25,11 +25,10 @@
 		clear: both;
 		width: 100%;
 		font-size: $s-meta;
-		display: block;
+		display: flex;
 		.menu-item{
 			list-style: none;
 			position: relative;
-			float: left;
 			padding: .5rem;
 			display: flex;
 			align-items: center;
@@ -76,8 +75,6 @@
 			.menu-item{
 				margin: 0;
 				padding: .25rem 1rem;
-				float: none;
-				border-bottom: 1px solid $c-border;
 				&:last-child{ border: 0;}
 			}
 			.sub-menu{
@@ -110,6 +107,22 @@
 	}
 // end
 
+// search
+	.right.search{
+		display: flex;
+		align-items: center;
+		form{ 
+			visibility: hidden; 
+			width: 0; 
+			opacity: 0; }
+		form.active{ 
+			visibility: visible; 
+			width: auto; 
+			opacity: 1; }
+		i.fas{ padding: 0 .5rem; cursor: pointer; }
+	}
+// end
+
 @include media('<=tablet'){
 	#genesis-mobile-nav-primary:before{
 		content: "\f0c9" !important;
@@ -132,6 +145,7 @@
 			
 			.genesis-nav-menu{
 				width: 100%;
+				display: block;
 				.menu-item{
 					float: none;
 					display: block;
@@ -164,5 +178,17 @@
 				}
 			}
 		}
+	}
+
+	.right.search{
+		display: flex;
+		align-items: center;
+		form{ 
+			visibility: visible; 
+			opacity: 1;
+			width: 100%;
+			@include padding( null 1rem 1rem )
+		}
+		i.fas{ display: none; }
 	}
 }

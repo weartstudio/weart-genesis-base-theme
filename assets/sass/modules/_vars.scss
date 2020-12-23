@@ -16,9 +16,8 @@ $f-regular: 'Aller', sans-serif;
   --c-light: #f8f9fa;
   --c-border: #dee2e6;
 }
-
-$c-1: var(--c-1);
-$c-2: var(--c-2);
+$c-1: var(--c-1); // title
+$c-2: var(--c-2); // main
 $c-text:var(--c-text);
 $c-meta: var(--c-meta);
 $c-light: var(--c-light);
