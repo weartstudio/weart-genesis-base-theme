@@ -43,6 +43,7 @@
 		&.page,
 		&.single{
 			.entry-header,
+			.entry-footer,
 			.entry-content{
 				@include media(">=tablet"){
 					@include margin(null auto);

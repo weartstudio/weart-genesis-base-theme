@@ -143,7 +143,7 @@ include_once( get_template_directory() . '/lib/init.php' );
         $search = ob_get_clean();
         $menu  .= '<li class="right search">';
             $menu  .= $search;
-            $menu  .= '<i class="fas fa-search" id="weart-search-icon"></i>';
+            $menu  .= '<i class="menu-item fas fa-search" id="weart-search-icon"></i>';
         $menu  .= '</li>';
         
 

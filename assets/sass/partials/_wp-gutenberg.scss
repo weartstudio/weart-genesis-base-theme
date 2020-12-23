@@ -193,7 +193,12 @@
 	.wp-block-latest-posts{
 		padding-left: 0;
 		margin-left: 0;
-		li{	list-style-type: none; @include clearfix; }
+		li{	
+			list-style-type: none; 
+			list-style: none;
+			@include clearfix; 
+			&:marker{ display: none; }
+		}
 		a{
 			font-size: $s-h4;
 			font-family: $f-title;

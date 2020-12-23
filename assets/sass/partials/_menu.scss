@@ -111,15 +111,24 @@
 	.right.search{
 		display: flex;
 		align-items: center;
+		position: relative;
 		form{ 
-			visibility: hidden; 
-			width: 0; 
-			opacity: 0; }
+			width: 300px; 
+			padding: $gap;
+			@include shadow;
+			background: white;
+			display: none;
+			@include position(absolute, 100% 0 null null)
+		}
 		form.active{ 
-			visibility: visible; 
-			width: auto; 
-			opacity: 1; }
-		i.fas{ padding: 0 .5rem; cursor: pointer; }
+			display: grid; 
+		}
+		i.fas{ 
+			color: $c-text;
+			font-size: .8rem;
+			width: 1rem; 
+			cursor: pointer; 
+		}
 	}
 // end
 
@@ -183,12 +192,15 @@
 	.right.search{
 		display: flex;
 		align-items: center;
+		border-top: 1px solid $c-border;
 		form{ 
 			visibility: visible; 
+			position: relative;
+			display: grid;
 			opacity: 1;
 			width: 100%;
 			@include padding( null 1rem 1rem )
 		}
-		i.fas{ display: none; }
+		i.fas{ display: none !important; }
 	}
 }
