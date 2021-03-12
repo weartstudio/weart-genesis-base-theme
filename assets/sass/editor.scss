@@ -1,5 +1,7 @@
 @import 'modules/mixins';
 @import 'modules/vars';
+@import "../../node_modules/bourbon/core/bourbon";
+@import "../../node_modules/include-media/dist/include-media"; 
 
 // basics
     body {

@@ -15,6 +15,9 @@ remove_theme_support('core-block-patterns');
 // remove edit link
 add_filter ( 'genesis_edit_post_link' , '__return_false' );
 
+// Remove Genesis menu link
+remove_theme_support( 'genesis-admin-menu' );
+
 // remove post meta
 // remove_action( 'genesis_entry_header', 'genesis_post_info', 12 );
 // remove_action( 'genesis_entry_footer', 'genesis_post_meta' );

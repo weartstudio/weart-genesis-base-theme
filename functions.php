@@ -46,7 +46,7 @@ include_once( get_template_directory() . '/lib/init.php' );
 			genesis_get_theme_handle() . '-fonts',
 			$appearance['fonts-url'],
 			[],
-			genesis_get_theme_version()
+			null
 		);
 
         // icons
@@ -54,7 +54,7 @@ include_once( get_template_directory() . '/lib/init.php' );
             genesis_get_theme_handle() . '-icons',
 			$appearance['fonts-icon'],
             [],
-            genesis_get_theme_version()
+            null
         );
 
         // slider theme style
