@@ -42,6 +42,7 @@
 		width: 100vw;
 		.wp-block-group__inner-container{
 			max-width: $content-width; 
+			@include margin(null auto);
 		}
 	}
 
