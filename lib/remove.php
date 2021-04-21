@@ -42,3 +42,5 @@ add_filter('use_block_editor_for_post', '__return_false', 10);
 
 // disable gutenberg for all post types
 add_filter('use_block_editor_for_post_type', '__return_false', 10);
+
+// more info: https://digwp.com/2018/04/how-to-disable-gutenberg/
