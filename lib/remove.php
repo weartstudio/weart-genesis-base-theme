@@ -36,3 +36,9 @@ genesis_unregister_layout( 'sidebar-content-sidebar' );
 
 // force default layout
 // add_filter( 'genesis_pre_get_option_site_layout', '__genesis_return_full_width_content' );
+
+// disable gutenberg for posts only
+add_filter('use_block_editor_for_post', '__return_false', 10);
+
+// disable gutenberg for all post types
+add_filter('use_block_editor_for_post_type', '__return_false', 10);

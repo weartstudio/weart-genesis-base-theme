@@ -1,13 +1,10 @@
 $gap: 16px;
 $content-width: 1140px;
 
-$f-bold: 'Aller Bold', sans-serif;
-$f-regular: 'Aller', sans-serif;
-
 :root {
-  --f-title: #{$f-bold};
+  --f-title: 'Aller Bold', sans-serif;
   --fw-title: bold;
-  --f-text: #{$f-regular};
+  --f-text: 'Aller', sans-serif;
   --fw-text: normal;
   --c-1: #0e1111;
   --c-2: #3b444b;
