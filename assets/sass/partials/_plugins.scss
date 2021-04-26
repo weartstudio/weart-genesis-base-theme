@@ -17,7 +17,7 @@ div.gform_wrapper form{
 		padding-bottom: 0;
 	}
 
-	div.gform_page_fields ul.gform_fields{
+	ul.gform_fields{
 		.gfield{
 			margin-top: $gap * 2;
 			&.gfield_error{ 
@@ -30,6 +30,7 @@ div.gform_wrapper form{
 				@include margin(0 0 $gap / 2);
 				text-transform: none;
 				letter-spacing: 0;
+				.gfield_required{  }
 			}
 			.ginput_container {
 				margin-top: $gap / 3;
