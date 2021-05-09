@@ -2,6 +2,7 @@
 	@include overflow-wrap;
     -webkit-animation: fadein 1s;
 	animation: fadein 1s;
+	position: relative;
 }
 
 @keyframes fadein {
@@ -20,7 +21,6 @@
     @include margin(null auto);     
     @include media('>desktop'){
         max-width: $content-width;
-		margin-top: 4.375rem; //70px
     }
 }
 .genesis-title-hidden .site-inner{ margin-top: 0; }

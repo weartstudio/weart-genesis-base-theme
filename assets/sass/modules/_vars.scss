@@ -1,31 +1,19 @@
 $gap: 16px;
 $content-width: 1140px;
 
-:root {
-  --f-title: 'Aller Bold', sans-serif;
-  --fw-title: bold;
-  --f-text: 'Aller', sans-serif;
-  --fw-text: normal;
-  --c-1: #0e1111;
-  --c-2: #3b444b;
-  --c-meta: #605052;
-  --c-text: #353839;
-  --c-light: #f8f9fa;
-  --c-border: #dee2e6;
-}
-$c-1: var(--c-1); // title
-$c-2: var(--c-2); // main
-$c-text:var(--c-text);
-$c-meta: var(--c-meta);
-$c-light: var(--c-light);
-$c-border:var(--c-border);
+$c-1: #3b444b; // title
+$c-2: #0e1111; // main
+$c-text: #605052;
+$c-meta: #353839;
+$c-light: #f8f9fa;
+$c-border: #dee2e6;
 
 // custom colors for theme
 
-$f-title: var(--f-title);
-$fw-title: var(--fw-title);
-$f-text: var(--f-text);
-$fw-text: var(--fw-text);
+$f-title: Arial, 'Helvetica Neue', sans-serif;
+$fw-title: bold;
+$f-text: Arial, 'Helvetica Neue', sans-serif;
+$fw-text: normal;
 
 $f-awesome: 'Font Awesome 5 Free';
 
