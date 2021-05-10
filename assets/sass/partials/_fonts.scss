@@ -19,7 +19,6 @@
 	.h1,.h2,.h3,.h4,.h5,.h6{
 		font-family: $f-title;
 		color: $c-1;
-		margin: 1.5rem 0;
 		line-height: 1.15em;
 		font-weight: $fw-title;
 		@include margin($gap null $gap * 2)
@@ -29,12 +28,8 @@
 	h2,.h2 {font-size: $s-h2;}
 	h3,.h3 {font-size: $s-h3;}
 	h4,.h4 {font-size: $s-h4;}
-	h5,.h5 ,
-	h6,.h6 {
-		text-transform: uppercase;
-		letter-spacing: 1px;
-		font-size: $s-h5; }
-	h6,.h6 { font-size: $s-h6;}
+	h5,.h5 {font-size: $s-h5;}
+	h6,.h6 {font-size: $s-h6;}
 
 	.one-third .entry-title{
 		font-size: $s-h4;
