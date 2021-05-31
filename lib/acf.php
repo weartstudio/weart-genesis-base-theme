@@ -1,12 +1,13 @@
 <?php
-/* 
+/*
  * ACF
  * - options page
  * - blocks
  *  */
 
-if( function_exists('acf_add_options_page') ) {
-	
+$options_page = false;
+if( function_exists('acf_add_options_page') && $options_page ) {
+
 	acf_add_options_page(array(
 		'page_title' 	=> 'Weart Studio Beállítások',
 		'menu_title'	=> 'Weart beállítások',
