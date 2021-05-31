@@ -41,6 +41,6 @@ return [
 	// 'genesis-footer-widgets'          	=> 3,
 	'genesis-menus'                   	=> [
 		'primary'   => __( 'Fejléc menü', 'weart' ),
-		'secondary' => __( 'Másodlagos menü', 'weart' ),
+		// 'secondary' => __( 'Másodlagos menü', 'weart' ),
 	],
 ];
